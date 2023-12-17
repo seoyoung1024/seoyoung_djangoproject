@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEOYOUNG Blog</title>
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="{% url 'index' %}"> 내블로그 이웃블로그</a>
+      <div class="create">
+        <a href="{% url 'create' %}">글쓰기</a>
+      </div>
+    </div>
+    <div class="wtitle">{{my_write.title}}</div>
+    <div class="date">{{my_write.updated_at}}</div>
+    <div class = "update">
+      <button class = "upde"><a href="{% url 'update' write_id=my_write.id %}">수정</a></button>
+    <button class = "upde"><a href="{% url 'delete' write_id=my_write.id %}"> 삭제</a></button>
+    </div>
+    <br />
+    <hr style="border: 0.1px color= #6765657c;;" width="60%" />
+
+    <div class="contents">{{my_write.contents}}</div>
+    <br />
+    <hr style="border: 0.3px color= #767272" width="60%" />
+    <div class ="comment">
+      <div class="eotrmf">댓글</div>
+      <hr style="border: 0.3px color= #767272" width="100%" />
+      {% for comment in comments %}
+      <p>
+        <div class="cc">
+        {{ comment.content }} <br> {{ comment.created_at }}
+      <button><a
+          href="{% url 'delete_comment' write_id=my_write.id comment_id=comment.id %}"
+          >삭제</a
+        ></button>
+      </div>
+      </p>
+      {% endfor %}
+    </div>
+    <!-- 댓글 작성 폼 -->
+
+    <div class="post">
+    <form method="post" action="{% url 'detail' write_id=my_write.id %}">
+      {% csrf_token %} {{ comment_form.as_p }}
+      <div class="btn"><button type="submit">댓글 쓰기</button></div>
+    </form>
+  </div>
+  </div>
+  </body>
+</html>

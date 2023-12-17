@@ -1,0 +1,12 @@
+<!-- write_detail.html -->
+{% extends 'base.html' %}
+
+{% for comment in comments %}
+  <div>{{ comment.content }} - {{ comment.created_at }}</div>
+{% endfor %}
+
+<form method="post" action="{% url 'write_detail' write.id %}">
+  {% csrf_token %}
+  {{ comment_form.as_p }}
+  <button type="submit">댓글 작성</button>
+</form>

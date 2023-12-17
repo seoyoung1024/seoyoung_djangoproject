@@ -1,0 +1,126 @@
+/* index.css */
+*{
+  text-decoration: none;
+  color: #000;
+}
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 1536px;
+  height: 63px;
+  background-color: rgba(214, 235, 204, 0.7); /* 배경색 지정 */
+}
+
+.header a {
+  color: #555151;
+  padding-top: 35px;
+  margin-left: 1230px;
+  font-weight: 545;
+  font-size: 13px;
+  line-height: normal;
+  display: flex;
+  text-decoration: none;
+}
+
+.header .create{
+  transform:  translateX(131px) translateY(-53px);
+}
+.main{
+  display: flex;
+}
+
+.main h1 {
+  color: #000;
+  font-family: Inter;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400px;
+  line-height: normal;
+  margin-left: 10px;
+  margin-top: 60px;
+}
+.p{
+  margin-left: 390px;
+}
+
+.main div{
+  color: #4F4F4F;
+  transform: translateX(-320px)translateY(120px);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.write-wrapper {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.write {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 650px;
+  text-align: left;
+  margin-left: 200px;
+  display: flex;
+}
+
+.write .title{
+  color: #000;
+  font-family: Inter;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 200px;
+  margin-top: 15px;
+  margin-left: 40px;
+  margin-bottom: 15px;
+}
+
+.write .contents{
+  text-decoration: none;
+  color: #333;
+  width: 500px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+.write .date{
+  font-size: 14px;
+  color: #333333dc;
+  margin-left: 40px;
+}
+
+.n1{
+  width: 190px;
+  height: 190px;
+  margin-left: 70px;
+}
+
+.update{
+  display: flex;
+  gap: 5px;
+
+}
+.write .upde{
+  font-size: 11px;
+  border: 0.2px solid rgba(214, 235, 204, 0.7);;
+  width: 50px;
+  height: 30px;
+  align-items: center;
+  border-radius: 4px;
+  background-color: rgba(214, 235, 204, 0.7);
+}
+
+.write .upde a {
+  color: rgba(86, 86, 86, 0.847);
+}

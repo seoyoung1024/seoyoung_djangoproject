@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEOYOUNG Blog</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="{% url 'index'%}"> 내블로그 이웃블로그</a> 
+      <div class="create">
+        <a href="{% url 'create' %}">글쓰기</a>
+      </div>
+    </div>
+    <div class="main">
+      <img class="p" src="{% static './img/p.png' %}" alt="Image Description" />
+      <h1>SEOYOUNG BLOG</h1>
+      <div>SEOYOUNG의 블로그에 오신 걸 환영합니다!</div>
+    </div>
+    <hr style="border:0.3px color= #767272;" width="90%">
+    </div>
+    <div class="write-wrapper">
+      {% for write in all_write %}
+      
+      <div class="write">
+        <img class = "n1" src="{% static './img/n1.png' %}" alt="Image Description" />
+        <a href="#">
+          <a href="{% url 'detail' write.id %}">
+          <div class ="title">{{ write.title }}</div>
+          <div class = "contents">{{ write.contents }}</div>
+          <div class = "date">{{ write.updated_at|date:"Y-m-d H:i:s" }}</div>
+        </a>
+        <div class = "update">
+        <button class = "upde"><a href="{% url 'update' write.id %}">수정</a></button>
+      <button class = "upde"><a href="{% url 'delete' write.id %}"> 삭제</a></button>
+      </div>
+    </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

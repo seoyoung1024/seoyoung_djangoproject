@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEOYOUNG Blog</title>
+    <link rel="stylesheet" href="{% static 'css/create.css' %}" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="{% url 'index'%}"> 내블로그 이웃블로그</a>
+      <div class="create">
+        <a href="{% url 'create' %}">글쓰기</a>
+      </div>
+    </div>
+    <div class="post">
+      <form method="POST">
+        {% csrf_token %}
+        <!-- Set initial values for the form fields -->
+        <input type="text" name="title" placeholder="제목">
+        <textarea name="contents" placeholder="내용"></textarea>
+        <input type="submit" value="발행하기" />
+      </form>
+    </div>
+  </body>
+</html>

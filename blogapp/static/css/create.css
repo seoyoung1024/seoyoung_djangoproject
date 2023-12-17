@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+*{
+  text-decoration: none;
+  color: #000;
+}
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 1536px;
+  height: 63px;
+  background-color: rgba(214, 235, 204, 0.7); /* 배경색 지정 */
+}
+
+.header a {
+  color: #555151;
+  padding-top: 35px;
+  margin-left: 1230px;
+  font-weight: 545;
+  font-size: 13px;
+  line-height: normal;
+  display: flex;
+  text-decoration: none;
+}
+
+.header .create{
+  transform:  translateX(131px) translateY(-53px);
+}
+
+p{
+  transform: translateX(480px);
+}
+.post{
+  width: 600px;
+  height: 600px;
+  background-color: #D6EBCC4D;
+  margin-left: 480px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+input[type="text"]{
+  border: 0.2px solid  rgba(188, 190, 187, 0.389);
+  height: 35px;
+  font-size: 25px;
+  margin-top: 50px;
+  border-radius: 2px;
+  color:#6f6f6f;
+  transform: translateX(50px);
+
+}
+
+textarea[name="contents"]{
+  border: 0.2px solid  rgb(214, 235, 204);
+  height: 400px;
+  width: 500px;
+  font-size: 16px;
+  border-radius: 2px;
+  transform: translateX(50px);
+  margin-top: 10px;
+}
+
+label[for="id_title"]{
+  color: #6f6f6f;
+  font-size: 20px;
+}
+
+label[for="id_contents"]{
+  color: #6f6f6f00;
+  font-size: 20px;
+}
+
+label[for="id_title"]{
+  color: #6f6f6f00;
+  font-size: 20px;
+}
+
+
+input[type="submit"]{
+  color: #3d3d3d;
+  font-size: 17px;
+  border: 0.2px solid rgba(214, 235, 204, 0.7);
+  width: 180px;
+  height: 42px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(214, 235, 204, 0.7);
+  transform: translateX(200px);
+  margin-top: 20px;
+}
